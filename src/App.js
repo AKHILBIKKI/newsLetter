@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
 import {
+  HashRouter,
   Route,
   Routes,
   // BrowserRouter
@@ -13,7 +14,7 @@ const App = () => {
   const [progress, setProgress] = useState(0);
 
   return (
-    <>
+    <HashRouter>
       <Navbar />
       <LoadingBar
         color="#f11946"
@@ -107,7 +108,7 @@ const App = () => {
           }
         />
       </Routes>
-      </>
+      </HashRouter>
   );
 };
 
